@@ -48,15 +48,14 @@ body {
 
 
 .container {
+  display: flex;
+  justify-content: space-between; /* Располагает навигацию и контакты в одну линию */
+  align-items: center; /* Центрирует элементы по вертикали */
   width: 1158px;
   margin: 0 auto; /* Центрирует контейнер */
   padding: 0 15px; /* Внутренние отступы по бокам */
 }
-.container-header{
-  display: flex;
-  justify-content: space-between; /* Располагает навигацию и контакты в одну линию */
-  align-items: center; /* Центрирует элементы по вертикали */
-}
+
 
 .header-logo-div{
     max-height: 24px;
@@ -165,20 +164,16 @@ body {
     color: #404bbf; /* Цвет при наведении и фокусе */
 }
 
-
-
 .main-content__intro {
-  padding-top: 188px;
-  padding-bottom: 188px;
-  
-}
-.container-first{
   display: flex;
   flex-direction: column; /* Устанавливаем вертикальное направление */
   align-items: center; /* Центрируем элементы по горизонтали */
   justify-content: center; /* Центрируем элементы по вертикали */
   height: 600px; /* Высота контейнера */
   background: #2e2f42;
+  padding-top: 188px;
+  padding-bottom: 188px;
+  
 }
 
 .main-content__title {
@@ -293,16 +288,15 @@ body {
  text-transform: capitalize;
 }
 .main-content__team {
+  background-color: #f4f4fd; /* Фон для родительского контейнера */
+min-height: 732px;
+  display: flex; /* Использует Flexbox */
+  flex-direction: column; /* Вертикальное направление */
+  justify-content: center; /* Центрирует контент по вертикали */
+  align-items: center; /* Центрирует контент по горизонтали */
   padding: 120px 0;
 }
-.container-team{
-  background-color: #f4f4fd; /* Фон для родительского контейнера */
-  min-height: 732px;
-    display: flex; /* Использует Flexbox */
-    flex-direction: column; /* Вертикальное направление */
-    justify-content: center; /* Центрирует контент по вертикали */
-    align-items: center; /* Центрирует контент по горизонтали */
-}
+
 .main-content__subtitle {
   margin-bottom: 100px;
   display: flex;
@@ -395,16 +389,7 @@ a {
    padding: 120px 0;
   
 }
-.container-portfolio{
-  padding-top: 16px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #f4f4fd;
-  line-height: 24px;
-}
+
 .portfolio__title{  
 display: flex;
 flex-direction: column;
@@ -493,12 +478,10 @@ border: 1px solid #e7e9fc;
 border-top: none;
 }
 
-
-
 .footer {
     padding: 100px 0;
   }
-  .container-footer{
+  .container5{
     display: flex;
     justify-content: center; /* Центрирует контейнер по горизонтали */
     padding-left: 156px; /* Отступы по краям контейнера */
@@ -536,4 +519,15 @@ border-top: none;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #f4f4fd
+  }
+  .container-section-foo {
+    padding-top: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    line-height: 24px;
+
   }
