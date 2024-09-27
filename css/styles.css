@@ -35,8 +35,8 @@ body {
     color: #434455; /* Цвет текста */
     background-color: #FFFFFF; /* Цвет фона */
 }
-
 .header {
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,11 +45,26 @@ body {
   padding-right: 156px;
   border-bottom: 1px solid #e7e9fc;
   background: #fff;
-  border-bottom: 1px solid #e7e9fc;
-
 }
+
+/* Контейнер внутри хедера */
+.header-container {
+  display: flex;
+  justify-content: space-between; /* Располагает навигацию и контакты в одну линию */
+  align-items: center;
+}
+
+/* Общий контейнер для стандартизации размеров контента */
+.container {
+  width: 1158px;
+  margin: 0 auto; /* Центрирует контейнер */
+  padding: 0 15px; /* Внутренние отступы по бокам */
+}
+
+
 .header-logo-div{
     max-height: 24px;
+      margin-right: 76px;  
 }
 
 .header__logo {
@@ -60,6 +75,8 @@ body {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5; /* Задаёт цвет текста */
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .header__logo-part-white {
@@ -77,10 +94,14 @@ body {
 
 .header__nav {
   display: flex;
+  align-items: center;
   gap: 40px;
   max-height: 24px;
 }
-
+ .header-panel{
+  display: flex; /* Элементы списка будут расположены горизонтально */
+  gap: 40px;
+ }
 .header__nav-list {
   display: flex; /* Элементы списка будут расположены горизонтально */
   gap: 40px; /* Расстояние между пунктами меню */
@@ -90,6 +111,10 @@ body {
 .header__nav-item {
   height: 24px;
   width: auto;
+  margin-right: 40px;
+}
+.header__nav-item:last-child {
+  margin-right: 0; /* Обнуляем отступ для последнего элемента */
 }
 
 .header__nav-link {
@@ -118,7 +143,7 @@ body {
 .header__contact-list {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 40px
   padding: 0;
   margin: 0;
 }
@@ -126,9 +151,12 @@ body {
 .header__contact-item {
   display: flex;
   align-items: center;
+  margin-right: 40px; /* Отступ между пунктами контактов */
+}
+.header__contact-item:last-child {
+  margin-right: 0;
 }
 .header__contact-link {
-  margin-right: 40px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -148,11 +176,13 @@ body {
   justify-content: center; /* Центрируем элементы по вертикали */
   height: 600px; /* Высота контейнера */
   background: #2e2f42;
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 
 .main-content__title {
   display: flex;
-  margin-bottom: 10px; /* Отступ между текстом и кнопкой */
+  
   margin-bottom: 48px;
   font-size: 56px; /* Укажите желаемый размер шрифта */
   font-family: "Roboto", sans-serif;
@@ -162,25 +192,28 @@ body {
   text-align: center;
   color: #fff;
  line-height: 1.07;
+ max-width: 496px;
 }
 
 .main-content__button {
-  display: flex;
-  justify-content: center; /* Центрирует текст внутри кнопки */
-  align-items: center; /* Вертикальное выравнивание текста */
+  display: block;
   white-space: nowrap; /* Запретить перенос текста на новую строку */
   padding: 16px 32px;
-  width: 169px;
-  height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  background: #4d5ae5;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #fff;
+  min-width: 169px;
+  height: 56px;
+  border: none; 
+  background-color:#4d5ae5;
+  border-radius: 4px;
   cursor: pointer;
+  margin-left: 150px;
+ 
 
 }
 .main-content__button:hover,
@@ -207,6 +240,8 @@ body {
   display: flex;
   flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
   gap: 24px; /* Отступ между колонками, можно настроить */
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .main-content__feature-item {
@@ -237,7 +272,24 @@ body {
   color: #434455;
   
 }
-
+.visually-hidden {
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 40px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  
+  position: absolute; /* Убирает элемент из потока */
+  overflow: hidden; /* Скрываем содержимое */
+  /* line-height: 40px; */ 
+  line-height: 1.11111;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+ text-transform: capitalize;
+}
 .main-content__team {
   background-color: #f4f4fd; /* Фон для родительского контейнера */
 min-height: 732px;
@@ -256,12 +308,12 @@ min-height: 732px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 36px;
-  
   /* line-height: 40px; */ 
   line-height: 1.11111;
   letter-spacing: 0.02em;
   color: #2e2f42;
  text-transform: capitalize;
+ margin-bottom: 72px;
 }
 
 .main-content__team-list {
@@ -269,11 +321,8 @@ min-height: 732px;
   flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
   gap: 24px; /* Отступ между колонками */
 }
-
-ul {
-  list-style-type: none; /* Убирает маркеры */
-  padding: 0; /* Убирает отступы */
-  margin: 0; /* Убирает внешние отступы */
+.main-content__team-list:last-child {
+  margin-right: 0; /* Обнуляем отступ для последнего элемента */
 }
 
 .main-content__team-member {
@@ -293,6 +342,14 @@ ul {
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   background: #fff;
 }
+.main-content__team-member:first-child {
+  width: calc((100% - 72px) / 4); /* Применение стиля только к первому элементу */
+  border-radius: 0px 0px 4px 4px;
+}
+.card-text{
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
 
 .main-content__team-img {
   max-width: 100%; /* Изображение не превышает ширину карточки */
@@ -308,6 +365,8 @@ ul {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  text-align: center; 
+  margin-bottom: 8px
 }
 .main-content__team-role {
     font-family: "Roboto", sans-serif;
@@ -319,32 +378,10 @@ ul {
     letter-spacing: 0.02em;
     text-align: center;
     color: #434455;
+   
 }
 
-.card-text-mark{
-    padding-top: 32px;
-padding-bottom: 32px;
-padding-right: 16px;
-padding-left: 16px;
-}
-.card-text-daniel{
-    padding-top: 32px;
-padding-bottom: 32px;
-padding-right: 16px;
-padding-left: 16px;
-}
-.card-text-camila{
-    padding-top: 32px;
-padding-bottom: 32px;
-padding-right: 16px;
-padding-left: 16px;
-}
-.card-text-tom{
-    padding-top: 32px;
-padding-bottom: 32px;
-padding-right: 16px;
-padding-left: 16px;
-}
+
 
 
 a {
@@ -371,6 +408,7 @@ letter-spacing: 0.02em;
 text-transform: capitalize;
 color: #2e2f42;
 margin-bottom: 72px; /* Добавляет отступ между заголовком и картинками */
+
 }
 
 .portfolio__image {
@@ -384,13 +422,23 @@ margin-bottom: 72px; /* Добавляет отступ между заголо�
   justify-content: center; /* Центрирует список */
   gap: 24px; /* Расстояние между элементами */
   list-style: none; /* Убирает маркеры списка */
+  flex-wrap: wrap;
+  column-gap: 24px; /* Задаем горизонтальные отступы между элементами */
+  row-gap: 48px; /* Задаем вертикальные отступы между элементами */
 }
 .portfolio__item{   
     display: block;
     text-align: center;
     width: 360px; /* Устанавливает фиксированную ширину для карточек */
- 
+    margin-right: 24px; /* Задаем отступы для каждого элемента списка */
+    margin-bottom: 48px; /* Задаем нижний отступ для каждого элемента списка */
+    
 }
+.portfolio__item:nth-child(3n) {
+  margin-right: 0; /* Убираем отступ для каждого третьего элемента */
+  margin-bottom: 0;
+}
+
 .portfolio__groups {
     display: flex;
     flex-wrap: wrap; /* Позволяет группам переноситься на новую строку */
@@ -419,6 +467,7 @@ margin-bottom: 72px; /* Добавляет отступ между заголо�
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 .portfolio__item-category{  
     font-family: "Roboto", sans-serif;
@@ -432,12 +481,11 @@ margin-bottom: 72px; /* Добавляет отступ между заголо�
     
 }
 .portfolio-card-text{
-    border-bottom: 1px solid #e7e9fc;
-border-left: 1px solid #e7e9fc;
-border-right: 1px solid #e7e9fc;
-padding: 32px 16px;
 width: 360px;
 height: 120px;
+padding: 32px 16px
+border: 1px solid #e7e9fc;
+border-top: none;
 }
 
 .footer {
@@ -458,8 +506,8 @@ height: 120px;
     min-height: 24px;
   }
   .footer-description{
- min-width: 264px;
-    min-height: 72px;
+ 
+    max-width: 264px
   }
   .footer__logo {
       font-family: "Raleway", sans-serif;
@@ -469,6 +517,8 @@ height: 120px;
       letter-spacing: 0.03em;
       text-transform: uppercase;
       color: #4d5ae5; /* Задаёт цвет текста */
+      display: inline-block;
+      margin-bottom: 16px;
   }
   .footer__logo_white{
     font-family: "Raleway", sans-serif;
@@ -478,7 +528,7 @@ height: 120px;
     text-transform: uppercase;
     color: #f4f4fd
   }
-  .footer__description {
+  .container-section-foo {
     padding-top: 16px;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
