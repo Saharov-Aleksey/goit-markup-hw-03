@@ -36,7 +36,6 @@ body {
     background-color: #FFFFFF; /* Цвет фона */
 }
 .header {
-  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,20 +46,17 @@ body {
   background: #fff;
 }
 
-/* Контейнер внутри хедера */
-.header-container {
-  display: flex;
-  justify-content: space-between; /* Располагает навигацию и контакты в одну линию */
-  align-items: center;
-}
 
-/* Общий контейнер для стандартизации размеров контента */
 .container {
   width: 1158px;
   margin: 0 auto; /* Центрирует контейнер */
   padding: 0 15px; /* Внутренние отступы по бокам */
 }
-
+.container-header{
+  display: flex;
+  justify-content: space-between; /* Располагает навигацию и контакты в одну линию */
+  align-items: center; /* Центрирует элементы по вертикали */
+}
 
 .header-logo-div{
     max-height: 24px;
@@ -169,15 +165,20 @@ body {
     color: #404bbf; /* Цвет при наведении и фокусе */
 }
 
+
+
 .main-content__intro {
+  padding-top: 188px;
+  padding-bottom: 188px;
+  
+}
+.container-first{
   display: flex;
   flex-direction: column; /* Устанавливаем вертикальное направление */
   align-items: center; /* Центрируем элементы по горизонтали */
   justify-content: center; /* Центрируем элементы по вертикали */
   height: 600px; /* Высота контейнера */
   background: #2e2f42;
-  padding-top: 188px;
-  padding-bottom: 188px;
 }
 
 .main-content__title {
@@ -223,16 +224,19 @@ body {
 
 
 .main-content__features {
-  margin-top: 50px;
+
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.main-content--features{
+    width: 1128px;
+    height: 104px;
+    margin-top: 50px;
   display: flex;
   flex-direction: column; /* Заголовок сверху, а элементы под ним */
   align-items: center;
   margin-bottom: 60px;
   min-height: 400px;
-}
-.main-content--features{
-    width: 1128px;
-    height: 104px;
 
 }
 
@@ -240,8 +244,7 @@ body {
   display: flex;
   flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
   gap: 24px; /* Отступ между колонками, можно настроить */
-  padding-top: 120px;
-  padding-bottom: 120px;
+  list-style: none;
 }
 
 .main-content__feature-item {
@@ -261,44 +264,45 @@ body {
 }
 
 .main-content__feature-description {
-  white-space: pre-line; /* Сохраняет переносы строк */
-  text-align: left; /* Выравнивание текста по левому краю */
-  margin: 0 auto; /* Центрирует текст внутри блока */
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
   
 }
+
 .visually-hidden {
-  margin-bottom: 100px;
-  display: flex;
-  flex-direction: column;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
   text-align: center;
   height: 40px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 36px;
-  
-  position: absolute; /* Убирает элемент из потока */
-  overflow: hidden; /* Скрываем содержимое */
-  /* line-height: 40px; */ 
   line-height: 1.11111;
   letter-spacing: 0.02em;
   color: #2e2f42;
  text-transform: capitalize;
 }
 .main-content__team {
-  background-color: #f4f4fd; /* Фон для родительского контейнера */
-min-height: 732px;
-  display: flex; /* Использует Flexbox */
-  flex-direction: column; /* Вертикальное направление */
-  justify-content: center; /* Центрирует контент по вертикали */
-  align-items: center; /* Центрирует контент по горизонтали */
+  padding: 120px 0;
 }
-
+.container-team{
+  background-color: #f4f4fd; /* Фон для родительского контейнера */
+  min-height: 732px;
+    display: flex; /* Использует Flexbox */
+    flex-direction: column; /* Вертикальное направление */
+    justify-content: center; /* Центрирует контент по вертикали */
+    align-items: center; /* Центрирует контент по горизонтали */
+}
 .main-content__subtitle {
   margin-bottom: 100px;
   display: flex;
@@ -388,14 +392,19 @@ a {
   text-decoration: none;
 }
 .portfolio{
-    text-align: center;
-    margin-top: 120px;
-    margin-right: 156px;
-    margin-bottom: 120px;
-    margin-left: 156px;
+   padding: 120px 0;
   
 }
-
+.container-portfolio{
+  padding-top: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  line-height: 24px;
+}
 .portfolio__title{  
 display: flex;
 flex-direction: column;
@@ -427,12 +436,8 @@ margin-bottom: 72px; /* Добавляет отступ между заголо�
   row-gap: 48px; /* Задаем вертикальные отступы между элементами */
 }
 .portfolio__item{   
-    display: block;
-    text-align: center;
-    width: 360px; /* Устанавливает фиксированную ширину для карточек */
-    margin-right: 24px; /* Задаем отступы для каждого элемента списка */
-    margin-bottom: 48px; /* Задаем нижний отступ для каждого элемента списка */
-    
+  width: calc((100% - (3 - 1) * 24px) / 3); /* Формула для расчета ширины */
+  max-width: 360px; /* Устанавливает максимальную ширину для карточек */
 }
 .portfolio__item:nth-child(3n) {
   margin-right: 0; /* Убираем отступ для каждого третьего элемента */
@@ -488,7 +493,12 @@ border: 1px solid #e7e9fc;
 border-top: none;
 }
 
+
+
 .footer {
+    padding: 100px 0;
+  }
+  .container-footer{
     display: flex;
     justify-content: center; /* Центрирует контейнер по горизонтали */
     padding-left: 156px; /* Отступы по краям контейнера */
@@ -498,15 +508,12 @@ border-top: none;
     min-height: 312px;
     background: #2e2f42;
   }
-  .footer-logo-description{
-    
-  }
+
   .footer-logo{
-    min-width: 115px;
-    min-height: 24px;
+    max-width: 115px;
+    max-height: 24px;
   }
   .footer-description{
- 
     max-width: 264px
   }
   .footer__logo {
@@ -519,6 +526,8 @@ border-top: none;
       color: #4d5ae5; /* Задаёт цвет текста */
       display: inline-block;
       margin-bottom: 16px;
+      display: inline-block;
+      margin-bottom: 16px;
   }
   .footer__logo_white{
     font-family: "Raleway", sans-serif;
@@ -527,15 +536,4 @@ border-top: none;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #f4f4fd
-  }
-  .container-section-foo {
-    padding-top: 16px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #f4f4fd;
-    line-height: 24px;
-
   }
