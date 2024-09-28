@@ -25,21 +25,21 @@ body {
     background-color: #FFFFFF; /* Цвет фона */
 }
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 72px;
-  padding-left: 156px;
-  padding-right: 156px;
+  
   border-bottom: 1px solid #e7e9fc;
-  background: #fff;
+  
 }
 
 
 .container {
+
   width: 1158px;
   margin: 0 auto; /* Центрирует контейнер */
   padding: 0 15px; /* Внутренние отступы по бокам */
+}
+.header-container{
+  display: flex;
+  align-items: center;
 }
 .header__logo {
   display: flex;
@@ -71,7 +71,7 @@ body {
 .header__nav {
   display: flex;
   align-items: center;
-  gap: 40px;
+  margin-right: auto;
 }
 
 .header__nav-list {
@@ -162,6 +162,8 @@ body {
   color: #fff;
  line-height: 1.07;
  max-width: 496px;
+ margin-right: auto;
+ margin-left: auto;
  
 }
 
@@ -182,7 +184,8 @@ body {
   background-color:#4d5ae5;
   border-radius: 4px;
   cursor: pointer;
-  margin-left: 150px;
+  margin-right: auto;
+  margin-left: auto;
  
 
 }
@@ -200,15 +203,15 @@ body {
 
 .main-content__feature-list {
   display: flex;
-  flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
+ 
   gap: 24px; /* Отступ между колонками, можно настроить */
   list-style: none;
 }
 
 .main-content__feature-item {
-  flex: 1 1 calc(20% - 20px); /* Уменьшите ширину, например, до 20% */
-  box-sizing: border-box; /* Учитывает padding и border в ширину */
 
+  box-sizing: border-box; /* Учитывает padding и border в ширину */
+width: calc((100%-72px)/4);
 }
 
 .main-content__feature-title {
@@ -252,11 +255,6 @@ body {
 }
 .main-content__team {
   background-color: #f4f4fd; /* Фон для родительского контейнера */
-min-height: 732px;
-  display: flex; /* Использует Flexbox */
-  flex-direction: column; /* Вертикальное направление */
-  justify-content: center; /* Центрирует контент по вертикали */
-  align-items: center; /* Центрирует контент по горизонтали */
   padding: 120px 0;
 }
 
@@ -281,26 +279,16 @@ min-height: 732px;
   display: flex;
   flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
   gap: 24px; /* Отступ между колонками */
+  list-style: none;
 }
 .main-content__team-list:last-child {
   margin-right: 0; /* Обнуляем отступ для последнего элемента */
 }
 
 .main-content__team-member {
-  position: relative;
-  flex: 1 1 calc(15% - 20px); /* Уменьшите ширину */
-  box-sizing: border-box; /* Учитывает padding и border в ширину */
   border-radius: 8px; /* Закругленные углы */
-  min-width: 200px; /* Минимальная ширина */
-  min-height: 200px; /* Увеличьте, если нужно */
-  overflow: hidden; /* Скрывает переполняющий контент */
-  margin: 0; /* Убираем внешний отступ */
   border-radius: 0 0 4px 4px;
-  padding: 0px 0px 32px 0px;
-  width: 264px;
-  height: 380px;
-  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+
   background: #fff;
 }
 .main-content__team-member:first-child {
@@ -383,8 +371,8 @@ margin-bottom: 72px; /* Добавляет отступ между заголо�
   
 }
 .portfolio__item{   
-  width: calc((100% - (3 - 1) * 24px) / 3); /* Формула для расчета ширины */
-  max-width: 360px; /* Устанавливает максимальную ширину для карточек */
+  width: calc((100% - 48px) / 3);
+
 
 }
 .portfolio__item:nth-child(3n) {
@@ -432,8 +420,7 @@ margin-bottom: 72px; /* Добавляет отступ между заголо�
     
 }
 .portfolio-card-text{
-width: 360px;
-height: 120px;
+
 border: 1px solid #e7e9fc;
 border-top: none;
 padding: 32px 16px;
@@ -441,13 +428,7 @@ padding: 32px 16px;
 
 .footer {
     padding: 100px 0;
-    display: flex;
     justify-content: center; /* Центрирует контейнер по горизонтали */
-    padding-left: 156px; /* Отступы по краям контейнера */
-    padding-bottom: 100px ;
-    padding-top: 100px;
-    flex-direction: column; /* Заголовок сверху, а элементы под ним */
-    min-height: 312px;
     background: #2e2f42;
   }
 
@@ -457,12 +438,7 @@ padding: 32px 16px;
     max-height: 24px;
   }
   .footer-description{
- font-family: "Roboto", sans-serif;
-font-weight: 400;
-font-size: 16px;
-/* line-height: 24px; */ 
-line-height: 1.5;
-letter-spacing: 0.02em;
+max-width: 264px;
 color: #f4f4fd;
   }
   .footer__logo {
