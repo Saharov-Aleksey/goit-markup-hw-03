@@ -13,23 +13,12 @@
     margin: 0;
     padding-left: 0;
  }
- .container { 
-    max-width: 
-    padding-left:  
-    padding-right:  
-    margin-left:  
-    margin-right:  
-    }
     img {
         display: block;
         max-width: 100%;
         height: auto;
       }
-      .section {
-        padding-top: 120px;
-        padding-bottom: 120px;
-      }
-      
+
 body {
     font-family: 'Roboto', sans-serif; /* Шрифт для текста */
     color: #434455; /* Цвет текста */
@@ -48,20 +37,10 @@ body {
 
 
 .container {
-  display: flex;
-  justify-content: space-between; /* Располагает навигацию и контакты в одну линию */
-  align-items: center; /* Центрирует элементы по вертикали */
   width: 1158px;
   margin: 0 auto; /* Центрирует контейнер */
   padding: 0 15px; /* Внутренние отступы по бокам */
 }
-
-
-.header-logo-div{
-    max-height: 24px;
-      margin-right: 76px;  
-}
-
 .header__logo {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -93,10 +72,7 @@ body {
   gap: 40px;
   max-height: 24px;
 }
- .header-panel{
-  display: flex; /* Элементы списка будут расположены горизонтально */
-  gap: 40px;
- }
+
 .header__nav-list {
   display: flex; /* Элементы списка будут расположены горизонтально */
   gap: 40px; /* Расстояние между пунктами меню */
@@ -104,9 +80,7 @@ body {
 }
 
 .header__nav-item {
-  height: 24px;
-  width: auto;
-  margin-right: 40px;
+ 
 }
 .header__nav-item:last-child {
   margin-right: 0; /* Обнуляем отступ для последнего элемента */
@@ -130,9 +104,11 @@ body {
 }
 
 .header__contact-info {
-  display: flex;
-  align-items: center;
   font-style: normal;
+  display: flex;
+  align-items: center; /* Выравнивание по вертикали */
+  height: 100%; /* Растягиваем на всю высоту, чтобы соответствовать логотипу и навигации */
+ 
 }
 
 .header__contact-list {
@@ -169,16 +145,15 @@ body {
   flex-direction: column; /* Устанавливаем вертикальное направление */
   align-items: center; /* Центрируем элементы по горизонтали */
   justify-content: center; /* Центрируем элементы по вертикали */
-  height: 600px; /* Высота контейнера */
   background: #2e2f42;
   padding-top: 188px;
   padding-bottom: 188px;
+  padding-left: 700px;
   
 }
 
 .main-content__title {
   display: flex;
-  
   margin-bottom: 48px;
   font-size: 56px; /* Укажите желаемый размер шрифта */
   font-family: "Roboto", sans-serif;
@@ -188,7 +163,7 @@ body {
   text-align: center;
   color: #fff;
  line-height: 1.07;
- max-width: 496px;
+ 
 }
 
 .main-content__button {
@@ -219,21 +194,10 @@ body {
 
 
 .main-content__features {
-
   padding-top: 120px;
   padding-bottom: 120px;
 }
-.main-content--features{
-    width: 1128px;
-    height: 104px;
-    margin-top: 50px;
-  display: flex;
-  flex-direction: column; /* Заголовок сверху, а элементы под ним */
-  align-items: center;
-  margin-bottom: 60px;
-  min-height: 400px;
 
-}
 
 .main-content__feature-list {
   display: flex;
@@ -389,7 +353,6 @@ a {
    padding: 120px 0;
   
 }
-
 .portfolio__title{  
 display: flex;
 flex-direction: column;
@@ -480,8 +443,6 @@ border-top: none;
 
 .footer {
     padding: 100px 0;
-  }
-  .container5{
     display: flex;
     justify-content: center; /* Центрирует контейнер по горизонтали */
     padding-left: 156px; /* Отступы по краям контейнера */
@@ -492,12 +453,19 @@ border-top: none;
     background: #2e2f42;
   }
 
+
   .footer-logo{
     max-width: 115px;
     max-height: 24px;
   }
   .footer-description{
-    max-width: 264px
+ font-family: "Roboto", sans-serif;
+font-weight: 400;
+font-size: 16px;
+/* line-height: 24px; */ 
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: #f4f4fd;
   }
   .footer__logo {
       font-family: "Raleway", sans-serif;
@@ -509,8 +477,6 @@ border-top: none;
       color: #4d5ae5; /* Задаёт цвет текста */
       display: inline-block;
       margin-bottom: 16px;
-      display: inline-block;
-      margin-bottom: 16px;
   }
   .footer__logo_white{
     font-family: "Raleway", sans-serif;
@@ -520,14 +486,9 @@ border-top: none;
     text-transform: uppercase;
     color: #f4f4fd
   }
-  .container-section-foo {
-    padding-top: 16px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #f4f4fd;
-    line-height: 24px;
+ 
 
-  }
+
+  
+
+
