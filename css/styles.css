@@ -429,7 +429,8 @@ padding: 32px 16px;
   .footer-logo{
     max-width: 115px;
     max-height: 24px;
-   
+    display: inline-block;
+    margin-bottom: 16px;
   }
   .footer__description {
     font-family: "Roboto", sans-serif;
@@ -438,7 +439,7 @@ padding: 32px 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     font-size: 16px;
-    margin-top: 16px;
+   
 }
 
   .footer__logo {
