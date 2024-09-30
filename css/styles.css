@@ -426,12 +426,7 @@ padding: 32px 16px;
   justify-content: center; /* Центрирует контейнер по горизонтали */
   }
 
-  .footer-logo{
-    max-width: 115px;
-    max-height: 24px;
-    display: inline-block;
-    margin-bottom: 16px;
-  }
+
   .footer__description {
     font-family: "Roboto", sans-serif;
     max-width: 264px;
@@ -449,6 +444,8 @@ padding: 32px 16px;
       line-height: 1.17;
       letter-spacing: 0.03em;
       color: #4d5ae5; /* Задаёт цвет текста */
+      display: inline-block;
+      margin-bottom: 16px;
   }
   .footer__logo_white{
     font-family: "Roboto", sans-serif;
